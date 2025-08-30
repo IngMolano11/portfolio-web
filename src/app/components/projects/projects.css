@@ -1,0 +1,109 @@
+.projects-container {
+  max-width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem; /* Reducido el margen inferior */
+  text-shadow: 0 0 10px rgba(160, 32, 240, 0.5);
+}
+
+.projects-carousel {
+  position: relative;
+  padding: 1rem 0; /* Reducido el padding */
+}
+
+.projects-grid {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  white-space: nowrap;
+}
+
+.projects-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-grid > * {
+  flex: 0 0 auto;
+  width: min(600px, 90vw);
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  pointer-events: none;
+}
+
+.carousel-btn {
+  background: rgba(160, 32, 240, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  color: white;
+  font-size: 1.5rem;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-btn:hover {
+  background: rgba(160, 32, 240, 0.8);
+  transform: scale(1.1);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(160, 32, 240, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #a020f0;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-buttons {
+    padding: 0 0.5rem;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

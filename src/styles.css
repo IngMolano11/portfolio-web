@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000000, #1a0022);
+  color: white;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-top: 80px; /* Mantener el espacio para el navbar */
+  overflow-x: hidden;
+}
+
+/* Ajuste general para todos los componentes principales */
+app-description,
+app-about-me,
+app-projects,
+app-contact-me {
+  display: block;
+  padding: 2rem; /* Reducido de 6rem */
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+  
+  app-description,
+  app-about-me,
+  app-projects,
+  app-contact-me {
+    padding: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a020f0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a2be2;
+}
+
+.swal2-popup {
+  border-radius: 15px !important;
+  border: 1px solid rgba(160, 32, 240, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.swal2-title, .swal2-html-container {
+  color: #fff !important;
+}
+
+.swal2-confirm {
+  box-shadow: 0 5px 15px rgba(160, 32, 240, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.swal2-confirm:hover {
+  transform: translateY(-2px) !important;
+}

@@ -1,0 +1,22 @@
+<div class="projects-container">
+  <h1><strong>Proyectos</strong></h1>
+  <div class="projects-carousel">
+    <div class="projects-grid" #carousel>
+      <app-project-card
+        *ngFor="let project of projects; let i = index"
+        [project]="project">
+      </app-project-card>
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-btn" (click)="scroll('left')">◀</button>
+      <button class="carousel-btn" (click)="scroll('right')">▶</button>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot" 
+            *ngFor="let project of projects; let i = index"
+            [class.active]="currentIndex === i"
+            (click)="scrollToIndex(i)">
+      </span>
+    </div>
+  </div>
+</div>

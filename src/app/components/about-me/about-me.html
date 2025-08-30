@@ -1,0 +1,177 @@
+<div class="container">
+  <h1>Un poco mas sobre mi</h1>
+  <div class="carousel">
+    <div class="cards-container" #carousel>
+      <!-- Educación -->
+      <div class="item">
+        <h1><Strong>Educación</Strong></h1>
+
+        <!-- Pregrado -->
+        <div>
+          <h2><em>Pregrado</em></h2>
+          <div class="accordion-header" (click)="toggleAccordion('pregrado')">
+            <h3>
+              <img src="../../../icons/u_Catolica.ico" alt="U. Católica">
+              Ingeniero de Sistemas y Computación
+            </h3>
+            <span class="accordion-icon" [class.active]="isActive('pregrado')">▼</span>
+          </div>
+          <div class="accordion-content" [class.active]="isActive('pregrado')">
+            <p>
+              Actualmente curso octavo semestre (8/10) del programa de Ingeniería de Sistemas y Computación, donde me he
+              formado en análisis de sistemas, desarrollo de software, bases de datos, inteligencia artificial y seguridad
+              informática. He fortalecido mi capacidad para comprender requerimientos, diseñar algoritmos eficientes y aplicar
+              buenas prácticas de programación y pruebas, además de adquirir competencias en integración tecnológica y análisis
+              de datos. Mi graduación está prevista para finales de 2026.
+            </p>
+            <a href="https://www.ucatolica.edu.co/portal/Pregrado/ingenieria-de-sistemas-y-computacion-p/?utm_source=Trafico_Pago&utm_medium=Google_Ads&gad_source=1&gad_campaignid=20789452036&gbraid=0AAAAAqfZP273BUUf8ai2o9W5uL5aUC_fZ&gclid=EAIaIQobChMI94iXsJ2vjwMVX4paBR3xXAT9EAAYASAAEgI6NfD_BwE" target="_blank">
+              <img src="../../../icons/u_Catolica.ico" alt="U. Católica">
+            </a>
+          </div>
+        </div>
+
+        <!-- Tecnico -->
+        <div>
+          <h2><em>Tecnico</em></h2>
+          <div class="accordion-header" (click)="toggleAccordion('tecnico')">
+            <h3>
+              <img src="../../../icons/sena_logo.ico" alt="SENA">
+              Tecnico en Programación de Software
+            </h3>
+            <span class="accordion-icon" [class.active]="isActive('tecnico')">▼</span>
+          </div>
+          <div class="accordion-content" [class.active]="isActive('tecnico')">
+            <p>
+              Me formé en el análisis y comprensión de requerimientos para el desarrollo de soluciones tecnológicas,
+              fortaleciendo mi lógica de programación y la capacidad de diseñar algoritmos eficientes. Durante el programa
+              trabajé con C# y bases de datos SQL, lo que me permitió construir aplicaciones y practicar buenas prácticas
+              de desarrollo, además de realizar pruebas de software para garantizar la calidad de los proyectos.
+            </p>
+            <a href="https://electricidadelectronicaytelecomu.blogspot.com/p/programacion-de-software.html" target="_blank">
+              <img src="../../../icons/sena_logo.ico" alt="Sena">
+            </a>
+          </div>
+        </div>
+
+        <!-- Angular -->
+        <div>
+          <h2><em>Otros</em></h2>
+          <div class="accordion-header" (click)="toggleAccordion('angular')">
+            <h3>
+              <img src="../../../icons/angular.ico" alt="Angular">
+              Angular - Udemy
+            </h3>
+            <span class="accordion-icon" [class.active]="isActive('angular')">▼</span>
+          </div>
+          <div class="accordion-content" [class.active]="isActive('angular')">
+            <p>
+              Domino Angular moderno (v19+), implementando componentes independientes, señales (writable/computed), RxJS,
+              formularios reactivos, rutas protegidas, autenticación JWT, consumo de APIs, mapas, lazy loading, y despliegue
+              a producción.
+            </p>
+            <a href="udemy.com/course/angular-fernando-herrera/" target="_blank">
+              <img src="../../../icons/angular.ico" alt="Angular">
+            </a>
+          </div>
+
+          <!-- NodeJs -->
+          <div class="accordion-header" (click)="toggleAccordion('nodejs')">
+            <h3>
+              <img src="../../../icons/nodejs.ico" alt="NodeJs">
+              NodeJs - Udemy
+            </h3>
+            <span class="accordion-icon" [class.active]="isActive('nodejs')">▼</span>
+          </div>
+          <div class="accordion-content" [class.active]="isActive('nodejs')">
+            <p>
+              Desarrollé servidores backend con NodeJS y Express, implementando REST APIs, autenticación JWT, carga de
+              archivos, sockets en tiempo real y conexión a bases de datos (MongoDB/MySQL) con TypeScript, aplicando
+              arquitectura limpia, testing y despliegues en producción.
+            </p>
+            <a href="https://www.udemy.com/course/nodejs-de-cero-a-experto/" target="_blank">
+              <img src="../../../icons/nodejs.ico" alt="NodeJs">
+            </a>
+          </div>
+
+          <!-- Scrum -->
+          <div class="accordion-header" (click)="toggleAccordion('scrum')">
+            <h3>
+              <img src="../../../icons/scrum.ico" alt="SCRUM">
+              SFC(Scrum Fundamentals Certified)
+            </h3>
+            <span class="accordion-icon" [class.active]="isActive('scrum')">▼</span>
+          </div>
+          <div class="accordion-content" [class.active]="isActive('scrum')">
+            <p>
+              Me certifiqué como Scrum Fundamentals Certified (SFC), adquiriendo conocimientos en los principios ágiles, roles,
+              artefactos y eventos de Scrum para la gestión efectiva de proyectos.
+            </p>
+            <a href="https://www.scrumstudy.com/certification/scrum-fundamentals-certified" target="_blank">
+              <img src="../../../icons/scrum.ico" alt="SCRUM">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experiencia -->
+      <div class="item">
+        <h1><Strong>Experiencia</Strong></h1>
+        <div class="accordion-header" (click)="toggleAccordion('magnex')">
+          <h3>
+            <img src="../../../icons/magnex.ico" alt="MAGNEX" class="magnex-icon">
+            Pasante como Ingeniero de Sistemas
+          </h3>
+          <span class="accordion-icon" [class.active]="isActive('magnex')">▼</span>
+        </div>
+        <div class="accordion-content" [class.active]="isActive('magnex')">
+          <p>
+            Realicé mi pasantía en Magnex como ingeniero de sistemas, apoyando el área de automatización del
+            departamento de TI para digitalizar y optimizar los procesos disciplinarios internos. Lideré la gestión
+            documental: estandaricé y aceleré la clasificación de documentos mediante scripts en Python, técnicas de
+            OCR, la librería Pandas y agentes de IA. Además brindé soporte y mantenimiento de software a equipos de
+            cómputo mediante atención y resolución de tickets, instalando y actualizando aplicaciones y configurando
+            entornos para garantizar la continuidad operativa.
+          </p>
+          <a href="https://www.scrumstudy.com/certification/scrum-fundamentals-certified" target="_blank">
+              <img src="../../../icons/magnex.ico" alt="MAGNEX" class="magnex-icon">
+            </a>
+        </div>
+      </div>
+
+      <!-- Stack -->
+      <div class="item">
+        <h1><Strong>Stack y Herramientas</Strong></h1>
+        <h3>Lenguajaes, Frameworks, Herramientas y mas...</h3>
+        <div class="stack-icons">
+          <img src="../../../icons/bootstrap.ico" alt="BOOTSTRAP">
+          <img src="../../../icons/css.ico" alt="CSS">
+          <img src="../../../icons/fastapi.ico" alt="FASTAPI">
+          <img src="../../../icons/angular.ico" alt="ANGULAR">
+          <img src="../../../icons/git.ico" alt="GIT">
+          <img src="../../../icons/github.ico" alt="GITHUB">
+          <img src="../../../icons/html.ico" alt="HTML">
+          <img src="../../../icons/mySql.ico" alt="MYSQL">
+          <img src="../../../icons/nodejs.ico" alt="NODEJS">
+          <img src="../../../icons/postman.ico" alt="POSTMAN">
+          <img src="../../../icons/python.ico" alt="PYTHON">
+          <img src="../../../icons/SQLite.ico" alt="SQLITE">
+          <img src="../../../icons/typescript.ico" alt="TYPESCRIPT">
+          <img src="../../../icons/visualstudio.ico" alt="VISUAL STUDIO">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-buttons">
+      <button class="carousel-btn" (click)="scroll('left')">◀</button>
+      <button class="carousel-btn" (click)="scroll('right')">▶</button>
+    </div>
+
+    <div class="carousel-dots">
+      <span class="dot"
+            *ngFor="let _ of [1,2,3]; let i = index"
+            [class.active]="currentIndex === i"
+            (click)="scrollToIndex(i)">
+      </span>
+    </div>
+  </div>
+</div>

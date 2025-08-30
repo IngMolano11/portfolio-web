@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="image-container">
+    <img [src]="project.imageUrl" [alt]="project.title" class="project-image">
+    <div class="overlay">
+      <div class="links">
+        <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" class="btn btn-demo">
+          <i class="fas fa-external-link-alt"></i> Demo
+        </a>
+        <a *ngIf="!project.demoUrl" (click)="showDemoAlert()" class="btn btn-demo">
+          <i class="fas fa-external-link-alt"></i> Demo
+        </a>
+        <a [href]="project.githubUrl" target="_blank" class="btn btn-code">
+          <i class="fab fa-github"></i> Código
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>{{ project.title }}</h2>
+    <div class="description-container">
+      <p #description [class.expanded]="isExpanded">
+        {{ project.description }}
+      </p>
+      <button class="toggle-btn" (click)="toggleDescription()">
+        {{ isExpanded ? '▲ Menos' : '▼ Más' }}
+      </button>
+    </div>
+
+    <div class="technologies">
+      <img *ngFor="let tech of project.technologies"
+           [src]="'../../../icons/' + tech + '.ico'"
+           [alt]="tech"
+           [title]="tech">
+    </div>
+  </div>
+</div>

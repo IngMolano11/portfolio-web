@@ -1,0 +1,58 @@
+<div class="contact-container">
+  <h1><strong>Contáctame</strong></h1>
+
+  <form action="https://formsubmit.co/ing.camilo.molano@gmail.com" method="POST" class="contact-form">
+    <div class="form-group">
+      <label for="name">
+        Nombre*
+        <input type="text" name="name" id="name" required>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="email">
+        E-mail*
+        <input type="email" name="email" id="email" required>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">
+        Asunto/Proyecto*
+        <input type="text" name="subject" id="subject" required>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="message">
+        Mensaje*
+        <textarea name="message" id="message" rows="5" required></textarea>
+      </label>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label class="checkbox-label">
+        <input name="consent" type="checkbox" required>
+        <span>Autorizo a responder y almacenar mis datos.</span>
+      </label>
+    </div>
+
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde portafolio">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://your-portfolio-url.com/thanks">
+
+    <button type="submit" class="submit-btn">Enviar mensaje</button>
+  </form>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/andres-camilo-molano-moreno-74a2b9347/" target="_blank">
+      <img src="../../../icons/linkedin.ico" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://github.com/IngMolano11?tab=repositories" target="_blank">
+      <img src="../../../icons/github.ico" alt="Github">
+      <span>Github</span>
+    </a>
+  </div>
+</div>
