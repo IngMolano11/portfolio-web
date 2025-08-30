@@ -50,8 +50,8 @@ export class ProjectsComponent implements AfterViewInit {
       title: 'Portfolio Web',
       description: 'Mi portafolio personal es un proyecto desarrollado con Angular, empleando HTML, CSS y TypeScript como base tecnológica, gestionado con Git y GitHub y trabajado en Visual Studio Code. Su objetivo es centralizar y mostrar de manera organizada mis proyectos, habilidades y experiencia como desarrollador en formación. Cuenta con una estructura limpia, navegación intuitiva y un diseño adaptable para cualquier dispositivo. Este portafolio funciona como carta de presentación profesional, combinando buenas prácticas de desarrollo front-end con la integración de repositorios y proyectos demostrativos.',
       imageUrl: '../../../images/portfolioCover.png',
-      demoUrl: '',
-      githubUrl: 'https://github.com/...',
+      demoUrl: 'https://my-portfolio-ing-camilo.netlify.app/',
+      githubUrl: 'https://github.com/IngMolano11/portfolio-web',
       technologies: ['angular', 'html', 'css', 'typescript', 'git', 'github', 'visualstudio']
     },
   ];
