@@ -12,6 +12,9 @@ import { ProjectCard } from '../project-card/project-card';
 export class ProjectsComponent implements AfterViewInit {
   @ViewChild('carousel') carousel!: ElementRef;
   currentIndex = 0;
+  isDragging = false;
+  startX = 0;
+  scrollLeft = 0;
 
   projects = [
     {
@@ -57,6 +60,7 @@ export class ProjectsComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit() {
+    this.initDragScroll();
     this.updateDotIndicator();
   }
 
@@ -98,5 +102,31 @@ export class ProjectsComponent implements AfterViewInit {
     const cardWidth = element.children[0].offsetWidth + 32;
 
     this.currentIndex = Math.round(scrollPosition / cardWidth);
+  }
+
+  private initDragScroll() {
+    const ele = this.carousel.nativeElement;
+    
+    ele.addEventListener('mousedown', (e: MouseEvent) => {
+      this.isDragging = true;
+      this.startX = e.pageX - ele.offsetLeft;
+      this.scrollLeft = ele.scrollLeft;
+    });
+
+    ele.addEventListener('mouseleave', () => {
+      this.isDragging = false;
+    });
+
+    ele.addEventListener('mouseup', () => {
+      this.isDragging = false;
+    });
+
+    ele.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!this.isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - ele.offsetLeft;
+      const walk = (x - this.startX) * 2;
+      ele.scrollLeft = this.scrollLeft - walk;
+    });
   }
 }

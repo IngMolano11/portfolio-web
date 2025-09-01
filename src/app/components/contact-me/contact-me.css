@@ -1,11 +1,12 @@
 .contact-container {
-  max-width: min(800px, 95vw);
+  max-width: min(800px, calc(100vw - 2rem));
   margin: 1rem auto;
   padding: 1.5rem;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(77, 4, 95, 0.8));
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  margin-bottom: 4rem; /* Espacio para el navbar móvil */
 }
 
 h1 {
@@ -54,6 +55,7 @@ input:focus, textarea:focus {
 .checkbox-group {
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1rem; /* Añadido espacio después del checkbox */
 }
 
 .checkbox-label {
@@ -79,7 +81,7 @@ input[type="checkbox"] {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 2rem;
+  margin-top: 1rem; /* Ajustado el margin-top */
   width: 100%;
   max-width: 300px;
   align-self: center;
@@ -128,6 +130,7 @@ input[type="checkbox"] {
   .contact-container {
     margin: 1rem;
     padding: 1.5rem;
+    margin-bottom: 5rem;
   }
 
   h1 {
@@ -136,21 +139,30 @@ input[type="checkbox"] {
 
   .form-group {
     gap: 0.3rem;
+    margin-bottom: 1rem;
   }
 
   input:not([type="checkbox"]), textarea {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 1rem;
+    font-size: 16px; /* Previene zoom en iOS */
   }
 
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .checkbox-group {
+    margin: 1rem 0;
   }
 
   .submit-btn {
+    width: 100%;
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+    margin-top: 2rem;
+    position: static; /* Eliminada la posición relativa */
+  }
+
+  .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
   }
 }

@@ -39,14 +39,7 @@ h1 {
 }
 
 .carousel-buttons {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2rem;
-  pointer-events: none;
+  display: none;
 }
 
 .carousel-btn {
@@ -92,7 +85,57 @@ h1 {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
+/* Actualizar en projects.css y about-me.css */
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.cards-container:active {
+  cursor: grabbing;
+}
+
+/* Indicador de scroll horizontal */
+.scroll-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(160, 32, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+  background: #a020f0;
+  transform: scale(1.2);
+}
+
+.card {
+  width: min(600px, calc(100vw - 2rem));
+  min-height: 400px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.image-container {
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
@@ -105,5 +148,18 @@ h1 {
     width: 35px;
     height: 35px;
     font-size: 1rem;
+  }
+
+  .card {
+    min-height: 350px;
+  }
+
+  .content h2 {
+    font-size: 1.25rem;
+  }
+
+  .description-container p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }

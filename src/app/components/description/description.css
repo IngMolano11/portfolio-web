@@ -42,7 +42,7 @@ img {
   min-height: calc(100vh - 80px);
   padding: 2rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin:3rem auto 0;
 }
 
 .text-content {
@@ -175,29 +175,36 @@ img {
 }
 
 @media (max-width: 768px) {
-    :host {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-    }
+  :host {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    margin-top: 5rem; /* Añadido margen superior extra para móviles */
+  }
 
-    .text-content {
-        margin-bottom: 20px;
-    }
+  .text-content {
+    margin-bottom: 20px;
+  }
 
-    img {
-        margin-left: 0;
-    }
+  img {
+    margin-left: 0;
+  }
 
-    .image-container {
-        width: 250px;
-        height: 250px;
-        margin-left: 0;
-        margin-top: 20px;
-    }
+  .image-container {
+    width: 250px;
+    height: 250px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
+/* Ajuste adicional para pantallas muy pequeñas */
 @media (max-width: 480px) {
+  :host {
+    margin-top: 6rem; /* Un poco más de margen para pantallas más pequeñas */
+  }
+  
   .image-container {
     width: 220px;
     height: 220px;
